@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.readFile('../../assets/aging-report-2.txt');
+    this.readFile('../../assets/aging-report.txt');
   }
 
   readFile(url: string): void {
