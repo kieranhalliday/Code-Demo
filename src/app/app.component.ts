@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'healthDataNg';
+  public title = 'Inside Desk Health Data';
+  public isAuthenticated: boolean;
+
+  constructor() {
+    this.isAuthenticated = false;
+  }
 }

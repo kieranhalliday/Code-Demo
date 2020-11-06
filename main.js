@@ -1,30 +1,10 @@
 import { fileLoader } from "ejs";
+import { fstat } from "fs";
 
-// Column names
-const colNames = [
-    'INSURANCE COMPANY/GROUP PLAN',
-    'INS PHONE #',
-    'GROUP NUM',
-    'PRIMARY/SECONDARY',
-    'SENT',
-    'SERVICE TRACER',
-    'ON HOLD',
-    'RE-SENT',
-    'PATIENT NAME',
-    'SUBSCRIBER',
-    'ASSIGN OF BENEFITS',
-    'ID NUM',
-    'BIRTHDAY',
-    'ESTIMATE',
-    'CURRENT',
-    '31-60',
-    '61-90',
-    '> 90',
-    'TOTAL'
-];
+
 
 let allRows = [];
-fileLoader('/aging-report-2.txt', (err, data) => {
+fs.readFile('/aging-report-2.txt', (err, data) => {
     if (err) throw err;
 
     allRows = data.toString().split("\n");
