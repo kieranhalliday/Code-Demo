@@ -1,8 +1,4 @@
-import { fileLoader } from "ejs";
-import { fstat } from "fs";
-
-
-
+// Initial testing ground for reading the file
 let allRows = [];
 fs.readFile('/aging-report-2.txt', (err, data) => {
     if (err) throw err;

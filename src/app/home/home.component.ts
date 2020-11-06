@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Constants } from '../constants';
 import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material/table';
+import { Sort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-home',
@@ -72,4 +73,41 @@ export class HomeComponent implements OnInit {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
+  sortData(sort: Sort): any {
+    const data = this.allData.slice();
+    if (!sort.active || sort.direction === '') {
+      this.allData = data;
+      return;
+    }
+
+    this.allData = data.sort((a, b) => {
+      const isAsc = sort.direction === 'asc';
+      switch (sort.active) {
+        case Constants.colNames[9]: return this.compareStrings(a[Constants.colNames[9]], b[Constants.colNames[9]], isAsc);
+        case Constants.colNames[13]: return this.compareNumbers(parseFloat(a[Constants.colNames[13]]),
+          parseFloat(b[Constants.colNames[13]]), isAsc);
+        case Constants.colNames[14]: return this.compareNumbers(parseFloat(a[Constants.colNames[14]]),
+          parseFloat(b[Constants.colNames[14]]), isAsc);
+        case Constants.colNames[15]: return this.compareNumbers(parseFloat(a[Constants.colNames[15]]),
+          parseFloat(b[Constants.colNames[15]]), isAsc);
+        case Constants.colNames[16]: return this.compareNumbers(parseFloat(a[Constants.colNames[16]]),
+          parseFloat(b[Constants.colNames[16]]), isAsc);
+        case Constants.colNames[17]: return this.compareNumbers(parseFloat(a[Constants.colNames[17]]),
+          parseFloat(b[Constants.colNames[17]]), isAsc);
+        case Constants.colNames[18]: return this.compareNumbers(parseFloat(a[Constants.colNames[18]]),
+          parseFloat(b[Constants.colNames[18]]), isAsc);
+        default: return 0;
+      }
+    });
+    this.dataSource = new MatTableDataSource(this.allData);
+
+  }
+
+  compareNumbers(a: number, b: number, isAsc: boolean): number {
+    return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+  }
+
+  compareStrings(a: string, b: string, isAsc: boolean): number {
+    return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+  }
 }

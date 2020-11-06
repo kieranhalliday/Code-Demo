@@ -15,6 +15,8 @@ import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { MatSortModule } from '@angular/material/sort';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
     MatCardModule,
     MatButtonModule,
+    MatSortModule,
     MatTableModule,
     MatDividerModule,
     MatProgressSpinnerModule,
