@@ -1,6 +1,79 @@
 <div class="home">
-    <div>
-      <h1>Hello World</h1>
-      <p class="lead">This is the homepage of your Angular app</p>
+  <div>
+    <h1>Hello World</h1>
+    <p class="lead">This is the homepage of your Angular app</p>
+  </div>
+  <div class="row">
+    <div class="column left">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Total value of outstanding claims</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            $ {{prettify(amountOutstanding)}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="spacer">
+
+    </div>
+    <div class="column right">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Average value of outstanding claims</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            $ {{prettify(averageOutstanding)}}
+          </p>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
+
+  <mat-table class="mat-elevation-z8" [dataSource]="dataSource">
+
+    <ng-container matColumnDef="SUBSCRIBER">
+      <mat-header-cell *matHeaderCellDef>CLIENT</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row['SUBSCRIBER']}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ESTIMATE">
+      <mat-header-cell *matHeaderCellDef>ESTIMATE</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row['ESTIMATE']}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="CURRENT">
+      <mat-header-cell *matHeaderCellDef>CURRENT</mat-header-cell>
+      <mat-cell class="description-cell" *matCellDef="let row">{{row['CURRENT']}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="31-60">
+      <mat-header-cell *matHeaderCellDef>31-60</mat-header-cell>
+      <mat-cell class="duration-cell" *matCellDef="let row">{{row['31-60']}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="61-90">
+      <mat-header-cell *matHeaderCellDef>61-90</mat-header-cell>
+      <mat-cell class="duration-cell" *matCellDef="let row">{{row['61-90']}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="> 90">
+      <mat-header-cell *matHeaderCellDef>> 90</mat-header-cell>
+      <mat-cell class="duration-cell" *matCellDef="let row">{{row['> 90']}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="TOTAL">
+      <mat-header-cell *matHeaderCellDef>TOTAL</mat-header-cell>
+      <mat-cell class="duration-cell" *matCellDef="let row">{{row['TOTAL']}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+  </mat-table>
+
+</div>

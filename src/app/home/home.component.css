@@ -6,3 +6,23 @@
     justify-content: center;
     font-family: sans-serif;
   }
+
+  .mat-table {
+    overflow: scroll;
+  }
+
+  .column {
+    width: 45%;
+  }
+
+  .spacer {
+    width: 10%
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right
+  }
