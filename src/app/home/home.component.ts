@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.readFile('../../assets/aging-report.txt');
+    this.readFile(Constants.fileName);
   }
 
   readFile(url: string): void {
@@ -40,7 +40,6 @@ export class HomeComponent implements OnInit {
 
         // ignore first 3 rows because they are meta data
         this.allRows.splice(0, 3);
-
 
         this.allRows.forEach((row, outerIndex) => {
           // Replace weird formatting
@@ -63,6 +62,7 @@ export class HomeComponent implements OnInit {
             }
           });
         });
+
         this.averageOutstanding = parseFloat((this.amountOutstanding / this.allRows.length).toFixed(2));
         this.dataSource = new MatTableDataSource(this.allData);
       });

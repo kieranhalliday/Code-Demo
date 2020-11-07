@@ -1,0 +1,311 @@
+<div class='home'>
+    <div>
+        <h4>Select a client</h4>
+        <mat-form-field>
+            <mat-select placeholder="Client" name="client" [(value)]="client">
+                <mat-option *ngFor="let row of allData" [value]="row">
+                    {{row['SUBSCRIBER']}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class='scroll'>
+        <!-- Row 1 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>INSURANCE COMPANY/GROUP PLAN</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['INSURANCE COMPANY/GROUP PLAN']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="spacer">
+
+            </div>
+            <div class="column right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>INS PHONE #</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['INS PHONE #']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>GROUP NUM</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['GROUP NUM']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="spacer">
+
+            </div>
+            <div class="column right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>PRIMARY/SECONDARY</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['PRIMARY/SECONDARY']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>SENT</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['SENT']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="spacer">
+
+            </div>
+            <div class="column right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>SERVICE TRACER</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['SERVICE TRACER']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>ON HOLD</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['ON HOLD']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="spacer">
+
+            </div>
+            <div class="column right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>RE-SENT</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['RE-SENT']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>PATIENT NAME</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['PATIENT NAME']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="spacer">
+
+            </div>
+            <div class="column right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>SUBSCRIBER</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['SUBSCRIBER']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Row 6 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>ASSIGN OF BENEFITS</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['ASSIGN OF BENEFITS']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="spacer">
+
+            </div>
+            <div class="column right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>ID NUM</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['ID NUM']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Row 7 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>BIRTHDAY</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['BIRTHDAY']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="spacer">
+
+            </div>
+            <div class="column right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>ESTIMATE</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['ESTIMATE']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Row 8 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>CURRENT</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['CURRENT']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="spacer">
+
+            </div>
+            <div class="column right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>31-60</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['31-60']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Row 9 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>61-90</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['61-90']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="spacer">
+
+            </div>
+            <div class="column right">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>> 90</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['> 90']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Row 10 -->
+        <div *ngIf="!!client" class="row">
+            <div class="column left">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>TOTAL</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>
+                            {{client['TOTAL']}}
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div> 
+</div>

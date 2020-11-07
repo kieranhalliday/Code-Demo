@@ -16,19 +16,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MatSortModule } from '@angular/material/sort';
+import { PersonalComponent } from './personal/personal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PersonalComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatSelectModule,
     FlexLayoutModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,

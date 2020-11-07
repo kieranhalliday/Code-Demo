@@ -1,5 +1,6 @@
 export class Constants {
 
+    static fileName = '../../assets/aging-report.txt';
     // Column names
     static colNames = [
         'INSURANCE COMPANY/GROUP PLAN',
