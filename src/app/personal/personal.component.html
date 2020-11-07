@@ -1,10 +1,10 @@
 <div class='home'>
     <div>
-        <h4>Select a client</h4>
+        <h4>Select a patient</h4>
         <mat-form-field>
-            <mat-select placeholder="Client" name="client" [(value)]="client">
+            <mat-select placeholder="Patient" name="patient" [(value)]="patient">
                 <mat-option *ngFor="let row of allData" [value]="row">
-                    {{row['SUBSCRIBER']}}
+                    {{row['PATIENT NAME']}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
@@ -14,7 +14,7 @@
 
     <div class='scroll'>
         <!-- Row 1 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -22,7 +22,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['INSURANCE COMPANY/GROUP PLAN']}}
+                            {{patient['INSURANCE COMPANY/GROUP PLAN']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -37,7 +37,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['INS PHONE #']}}
+                            {{patient['INS PHONE #']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -45,7 +45,7 @@
         </div>
 
         <!-- Row 2 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -53,7 +53,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['GROUP NUM']}}
+                            {{patient['GROUP NUM']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -68,7 +68,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['PRIMARY/SECONDARY']}}
+                            {{patient['PRIMARY/SECONDARY']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -76,7 +76,7 @@
         </div>
 
         <!-- Row 3 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -84,7 +84,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['SENT']}}
+                            {{patient['SENT']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -99,7 +99,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['SERVICE TRACER']}}
+                            {{patient['SERVICE TRACER']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -107,7 +107,7 @@
         </div>
 
         <!-- Row 4 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -115,7 +115,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['ON HOLD']}}
+                            {{patient['ON HOLD']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -130,7 +130,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['RE-SENT']}}
+                            {{patient['RE-SENT']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -138,7 +138,7 @@
         </div>
 
         <!-- Row 5 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -146,7 +146,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['PATIENT NAME']}}
+                            {{patient['PATIENT NAME']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -161,7 +161,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['SUBSCRIBER']}}
+                            {{patient['SUBSCRIBER']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -169,7 +169,7 @@
         </div>
 
         <!-- Row 6 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -177,7 +177,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['ASSIGN OF BENEFITS']}}
+                            {{patient['ASSIGN OF BENEFITS']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -192,7 +192,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['ID NUM']}}
+                            {{patient['ID NUM']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -200,7 +200,7 @@
         </div>
 
         <!-- Row 7 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -208,7 +208,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['BIRTHDAY']}}
+                            {{patient['BIRTHDAY']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -223,7 +223,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['ESTIMATE']}}
+                            {{patient['ESTIMATE']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -231,7 +231,7 @@
         </div>
 
         <!-- Row 8 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -239,7 +239,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['CURRENT']}}
+                            {{patient['CURRENT']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -254,7 +254,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['31-60']}}
+                            {{patient['31-60']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -262,7 +262,7 @@
         </div>
 
         <!-- Row 9 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -270,7 +270,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['61-90']}}
+                            {{patient['61-90']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -285,7 +285,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['> 90']}}
+                            {{patient['> 90']}}
                         </p>
                     </mat-card-content>
                 </mat-card>
@@ -293,7 +293,7 @@
         </div>
 
         <!-- Row 10 -->
-        <div *ngIf="!!client" class="row">
+        <div *ngIf="!!patient" class="row">
             <div class="column left">
                 <mat-card>
                     <mat-card-header>
@@ -301,7 +301,7 @@
                     </mat-card-header>
                     <mat-card-content>
                         <p>
-                            {{client['TOTAL']}}
+                            {{patient['TOTAL']}}
                         </p>
                     </mat-card-content>
                 </mat-card>

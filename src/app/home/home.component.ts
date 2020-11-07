@@ -12,7 +12,7 @@ import { Sort } from '@angular/material/sort';
 
 export class HomeComponent implements OnInit {
   // Setting column names and order
-  displayedColumns = [Constants.colNames[9], Constants.colNames[13], Constants.colNames[14],
+  displayedColumns = [Constants.colNames[8], Constants.colNames[13], Constants.colNames[14],
   Constants.colNames[15], Constants.colNames[16], Constants.colNames[17], Constants.colNames[18]];
 
   allRows = [];

@@ -35,9 +35,9 @@
 
   <mat-table class="mat-elevation-z8" [dataSource]="dataSource" matSort (matSortChange)="sortData($event)">
 
-    <ng-container matColumnDef="SUBSCRIBER">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>CLIENT</mat-header-cell>
-      <mat-cell *matCellDef="let row">{{row['SUBSCRIBER']}}</mat-cell>
+    <ng-container matColumnDef="PATIENT NAME">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>PATIENT</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row['PATIENT NAME']}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="ESTIMATE">

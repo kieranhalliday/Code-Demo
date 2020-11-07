@@ -12,7 +12,7 @@ export class PersonalComponent implements OnInit {
 
   allRows = [];
   allData = [];
-  client;
+  patient;
 
   constructor(
     private http: HttpClient
@@ -49,7 +49,7 @@ export class PersonalComponent implements OnInit {
             }
           });
         });
-        this.client = this.allData[0];
+        this.patient = this.allData[0];
       });
   }
 
